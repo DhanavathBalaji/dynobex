@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DYNOBEX | Admin Dashboard</title>
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="admin-layout">
+
+
+    <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+    <aside class="admin-sidebar">
+
+
+        <div class="sidebar-brand">
+
+            <a
+                href="index.html"
+                class="dashboard-logo"
+            >
+
+                <img
+                    src="logo.PNG"
+                    alt="DYNOBEX Logo"
+                    class="sidebar-logo"
+                >
+
+                <div>
+
+                    <h1>
+                        DYNO<span>BEX</span>
+                    </h1>
+
+                    <p>
+                        Admin Dashboard
+                    </p>
+
+                </div>
+
+            </a>
+
+        </div>
+
+
+
+        <nav class="sidebar-menu">
+
+
+            <a
+                href="#dashboard"
+                class="menu-item active"
+            >
+
+                <span>
+                    📊
+                </span>
+
+                Dashboard
+
+            </a>
+
+
+            <a
+                href="#enquiries"
+                class="menu-item"
+            >
+
+                <span>
+                    📩
+                </span>
+
+                Enquiries
+
+            </a>
+
+
+        </nav>
+
+
+
+        <div class="sidebar-bottom">
+
+
+            <a
+                href="index.html"
+                class="view-website"
+            >
+
+                🌐 View Website
+
+            </a>
+
+
+            <button
+                type="button"
+                class="logout-button"
+                onclick="logoutAdmin()"
+            >
+
+                Logout
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =========================================
+         MAIN CONTENT
+    ========================================== -->
+
+    <main class="admin-main">
+
+
+        <!-- =========================================
+             HEADER
+        ========================================== -->
+
+        <header class="admin-header">
+
+
+            <div>
+
+                <h2>
+                    DYNOBEX Dashboard
+                </h2>
+
+                <p>
+                    Manage and track business enquiries.
+                </p>
+
+            </div>
+
+
+            <div class="admin-user">
+
+                <span>
+                    Logged in as
+                </span>
+
+                <strong id="adminEmailDisplay">
+
+                    Admin
+
+                </strong>
+
+            </div>
+
+
+        </header>
+
+
+
+        <!-- =========================================
+             STATISTICS
+        ========================================== -->
+
+        <section
+            id="dashboard"
+            class="dashboard-stats"
+        >
+
+
+            <div class="stat-card">
+
+                <span class="stat-label">
+                    Total Enquiries
+                </span>
+
+                <strong
+                    id="totalCount"
+                    class="stat-number"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="stat-card new">
+
+                <span class="stat-label">
+                    New
+                </span>
+
+                <strong
+                    id="newCount"
+                    class="stat-number"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="stat-card contacted">
+
+                <span class="stat-label">
+                    Contacted
+                </span>
+
+                <strong
+                    id="contactedCount"
+                    class="stat-number"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="stat-card progress">
+
+                <span class="stat-label">
+                    In Progress
+                </span>
+
+                <strong
+                    id="inProgressCount"
+                    class="stat-number"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+
+            <div class="stat-card completed">
+
+                <span class="stat-label">
+                    Completed
+                </span>
+
+                <strong
+                    id="completedCount"
+                    class="stat-number"
+                >
+                    0
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =========================================
+             ENQUIRIES
+        ========================================== -->
+
+        <section
+            id="enquiries"
+            class="enquiries-section"
+        >
+
+
+            <div class="section-header">
+
+
+                <div>
+
+                    <h2>
+                        Project Enquiries
+                    </h2>
+
+                    <p>
+                        View, manage and update customer enquiries.
+                    </p>
+
+                </div>
+
+
+
+                <div class="header-actions">
+
+
+                    <!-- STATUS FILTER -->
+
+                    <select
+                        id="statusFilter"
+                        aria-label="Filter enquiries"
+                    >
+
+                        <option value="All">
+                            All Enquiries
+                        </option>
+
+                        <option value="New">
+                            New
+                        </option>
+
+                        <option value="Contacted">
+                            Contacted
+                        </option>
+
+                        <option value="In Progress">
+                            In Progress
+                        </option>
+
+                        <option value="Completed">
+                            Completed
+                        </option>
+
+                    </select>
+
+
+
+                    <!-- SEARCH -->
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search name, business, email..."
+                    >
+
+
+
+                    <!-- REFRESH -->
+
+                    <button
+                        type="button"
+                        id="refreshButton"
+                        class="refresh-button"
+                    >
+
+                        ↻ Refresh
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 TABLE
+            ====================================== -->
+
+            <div class="table-wrapper">
+
+
+                <table
+                    id="enquiriesTable"
+                >
+
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Customer
+                            </th>
+
+                            <th>
+                                Business
+                            </th>
+
+                            <th>
+                                Contact
+                            </th>
+
+                            <th>
+                                Service
+                            </th>
+
+                            <th>
+                                Budget
+                            </th>
+
+                            <th>
+                                Requirement
+                            </th>
+
+                            <th>
+                                Status
+                            </th>
+
+                            <th>
+                                Date
+                            </th>
+
+                            <th>
+                                Actions
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+
+                    <tbody>
+
+                        <tr>
+
+                            <td
+                                colspan="9"
+                                class="loading-row"
+                            >
+
+                                Loading enquiries...
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+
+                </table>
+
+
+            </div>
+
+
+
+            <!-- =====================================
+                 PAGINATION
+            ====================================== -->
+
+            <div
+                id="pagination"
+                class="pagination"
+            >
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+
+<!-- =========================================
+     SUPABASE
+========================================== -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+
+<!-- =========================================
+     SUPABASE CONFIG
+========================================== -->
+
+<script src="supabase-config.js"></script>
+
+
+<!-- =========================================
+     DASHBOARD SCRIPT
+========================================== -->
+
+<script src="admin-dashboard.js"></script>
+
+
+</body>
+
+</html>

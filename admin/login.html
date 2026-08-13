@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>DYNOBEX Admin Login</title>
+
+    <link
+        rel="stylesheet"
+        href="admin.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <div class="admin-login-page">
+
+
+        <!-- Background Shapes -->
+
+        <div class="background-shape shape-1"></div>
+
+        <div class="background-shape shape-2"></div>
+
+        <div class="background-shape shape-3"></div>
+
+
+        <!-- Login Card -->
+
+        <div class="login-card">
+
+
+            <!-- Logo -->
+
+            <a
+                href="../index.html"
+                class="admin-brand"
+            >
+
+                <img
+                    src="../logo.PNG"
+                    alt="DYNOBEX Logo"
+                    class="admin-logo"
+                >
+
+                <div class="brand-text">
+
+                    <span class="brand-main">
+
+                        DYNO<span>BEX</span>
+
+                    </span>
+
+                    <small>
+                        Admin Portal
+                    </small>
+
+                </div>
+
+            </a>
+
+
+            <!-- Heading -->
+
+            <div class="login-heading">
+
+                <h1>
+                    Welcome Back
+                </h1>
+
+                <p>
+                    Sign in to manage DYNOBEX enquiries and leads.
+                </p>
+
+            </div>
+
+
+            <!-- Login Form -->
+
+            <form
+                id="adminLoginForm"
+            >
+
+
+                <div class="form-group">
+
+                    <label for="adminEmail">
+
+                        Email Address
+
+                    </label>
+
+
+                    <input
+                        type="email"
+                        id="adminEmail"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="adminPassword">
+
+                        Password
+
+                    </label>
+
+
+                    <div class="password-wrapper">
+
+                        <input
+                            type="password"
+                            id="adminPassword"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+
+                        <button
+                            type="button"
+                            id="togglePassword"
+                            class="toggle-password"
+                        >
+
+                            Show
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Error / Success Message -->
+
+                <p
+                    id="loginStatus"
+                    class="login-status"
+                ></p>
+
+
+                <button
+                    type="submit"
+                    id="loginButton"
+                    class="login-button"
+                >
+
+                    Sign In
+
+                </button>
+
+
+            </form>
+
+
+            <a
+                href="../index.html"
+                class="back-to-site"
+            >
+
+                ← Back to DYNOBEX Website
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Supabase -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+   <!-- Shared Supabase Configuration -->
+<script src="../supabase.js"></script>
+
+
+    <!-- Admin Login -->
+
+    <script src="admin-login.js"></script>
+
+
+</body>
+
+</html>
