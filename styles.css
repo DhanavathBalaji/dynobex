@@ -547,7 +547,7 @@ nav a.active::after {
 
     gap: 70px;
 
-    align-items: center;
+    align-items: left;
 
 }
 
