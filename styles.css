@@ -1029,9 +1029,9 @@ nav a.active::after {
 .section-header {
 
     max-width: 700px;
-     padding-top: 10px;
+     
     margin-bottom: 55px;
-    margin-top: 20px;
+  
 
 }
 
@@ -2425,9 +2425,11 @@ footer {
 ========================================================= */
 
 .projects-section {
-    padding: 100px 0;
+   padding: 40px 0;
+   
     position: relative;
 }
+
 
 
 /* =========================================================
