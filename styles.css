@@ -2426,7 +2426,7 @@ footer {
 
 .projects-section {
    margin-top: 0;
-    padding-top: 40px;
+    padding-top: 10px;
     position: relative;
 }
 
@@ -2436,14 +2436,14 @@ footer {
 ========================================================= */
 
 .projects-section .section-header {
-    text-align: right;
+    text-align: left;
     max-width: 700px;
     margin: 0 auto 55px;
 }
 
 .projects-section .section-tag {
     display: inline-flex;
-    align-items: right ;
+    align-items: left ;
     padding: 8px 16px;
     border-radius: 30px;
 
