@@ -640,7 +640,7 @@ nav a.active::after {
     flex-wrap: wrap;
     gap: 14px;
     margin-top: 28px;
-   margin-top: 20px;
+   margin-bottom: 28px;
    
 }
 
@@ -720,6 +720,7 @@ nav a.active::after {
     margin-top: 45px;
 
     flex-wrap: wrap;
+    margin-bottom: 25px;
 
 }
 
