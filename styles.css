@@ -636,13 +636,10 @@ nav a.active::after {
 
 
 .hero-buttons {
-
     display: flex;
-
     flex-wrap: wrap;
-
     gap: 14px;
-
+    margin-top: 28px;
 }
 
 
