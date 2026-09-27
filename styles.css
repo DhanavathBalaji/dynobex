@@ -755,13 +755,13 @@ nav a.active::after {
     align-items: right ;
 
     
-    padding-left: 55px;
+    padding-left: 95px;
 }
 
 .projects-section .section-header {
     margin-top: 0;
     padding-top: 0;
-   padding-right: 35px;
+   
 }
 
 }
@@ -2488,7 +2488,7 @@ footer {
     width: 100%;
     max-width: 100%;
 
-    padding: 50px 0 80px;
+    padding: 50px 40px 80px;
 
     position: relative;
 
