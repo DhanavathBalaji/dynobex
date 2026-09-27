@@ -2488,7 +2488,7 @@ footer {
     width: 100%;
     max-width: 100%;
 
-    padding: 50px 40px 80px 0px;
+    padding: 50px 80px 80px auto;
 
     position: relative;
 
