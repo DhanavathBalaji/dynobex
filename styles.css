@@ -557,6 +557,7 @@ nav a.active::after {
     position: relative;
 
     z-index: 2;
+   
 
 }
 
@@ -1028,7 +1029,7 @@ nav a.active::after {
 .section-header {
 
     max-width: 700px;
-
+     padding-top: 10px;
     margin-bottom: 55px;
     margin-top: 20px;
 
