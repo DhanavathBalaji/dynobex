@@ -754,8 +754,8 @@ nav a.active::after {
 
     align-items: right ;
 
-    
-    padding-left: 95px;
+     margin-left: auto;
+    margin-right: auto;
 }
 
 .projects-section .section-header {
