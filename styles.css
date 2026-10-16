@@ -2742,6 +2742,55 @@ footer {
 }
 
 
+/* Instagram contact background */
+.contact-item.instagram {
+    background: linear-gradient(
+        135deg,
+        #833AB4,
+        #E1306C,
+        #FCAF45
+    );
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* WhatsApp contact background */
+.contact-item.whatsapp {
+    background-color: #25D366;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* Gmail contact background */
+.contact-item.gmail {
+    background-color: #EA4335;
+    color: #ffffff;
+    border-color: transparent;
+}
+
+/* Keep headings and text white */
+.contact-item.instagram h4,
+.contact-item.whatsapp h4,
+.contact-item.gmail h4,
+.contact-item.instagram p,
+.contact-item.whatsapp p,
+.contact-item.gmail p,
+.contact-item.instagram a,
+.contact-item.whatsapp a,
+.contact-item.gmail a {
+    color: #ffffff;
+}
+
+/* Hover effect */
+.contact-item.instagram:hover,
+.contact-item.whatsapp:hover,
+.contact-item.gmail:hover {
+    filter: brightness(0.92);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+
 /* =========================================================
    PROJECT DISPLAY
 ========================================================= */
